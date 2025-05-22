@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center" >歡迎，{{ username | add_stars }}</h1>
+<p class="text-center">您已成功登入會員系統!</p>
+
+<div class="text-center">
+
+<a href="{{ url_for('edit_profile', iid=iid) }}" class="btn btn-primary me-2">修改基本資料</a>
+<a href="{{ url_for('delete', iid=iid) }}" onclick ="return confirm('若刪除這個使用者，所有相關記錄將一併刪除，是否繼續？')" class="btn btn-danger m-2">刪除使用者</a>
+<a class="btn btn-secondary me-2" href="{{ url_for('index') }}">返回首頁</a>
+
+</div>
+
+{% endblock %}
+
+{% block title %}
+{{ super() }} - {{ subtitle|default('歡迎') }}
+{% endblock %}

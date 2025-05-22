@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-center">會員登入</h1>
+
+<form method="POST" >
+    
+    <div class="mb-3">
+        <label for="email" class="form-label">電子郵件</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">密碼</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">登入</button>
+    </div>
+
+    
+</form>
+
+{% endblock %}
+
+{% block title %}
+{{ super() }} - {{ subtitle|default('登入') }}
+{% endblock %}
