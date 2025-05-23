@@ -4,4 +4,9 @@ h1 {
     text-align: center;
     padding: 10px;
     font-family: 'Microsoft JhengHei', sans-serif;
+    
+}
+
+.navbar.bg-light {
+    background-color: #fff !important;
 }
